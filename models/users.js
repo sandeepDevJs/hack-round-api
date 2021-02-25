@@ -26,12 +26,12 @@ const companySchema = new mongoose.Schema({
 	},
 	state: {
 		type: String,
-		maxlength: [40, "state name cannot exceed 40 chars!"],
+		maxlength: [50, "state name cannot exceed 40 chars!"],
 		required: [true, "Company State Is Required!"],
 	},
 	city: {
 		type: String,
-		maxlength: [40, "city name cannot exceed 40 chars!"],
+		maxlength: [50, "city name cannot exceed 40 chars!"],
 		required: [true, "Company City Is Required!"],
 	},
 });
