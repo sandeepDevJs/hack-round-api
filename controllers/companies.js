@@ -4,8 +4,18 @@ const companyModel = require("../models/users");
 // @desc   Get All companies
 // @route  /api/companies/
 module.exports.getCompanies = asyncHandler(async (req, res, next) => {
-	let data = await companyModel.find();
-	res.send({ success: true, count: data.length, data });
+	let data,
+		id = req.params.id;
+	if (id) {
+		data = await companyModel.findById(id);
+	} else {
+		data = await companyModel.find();
+	}
+	res.send({
+		success: true,
+		count: data instanceof Array ? data.length : data ? 1 : 0,
+		data,
+	});
 });
 
 // @desc   Add Company
