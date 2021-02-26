@@ -14,6 +14,7 @@ const companySchema = new mongoose.Schema({
 	email: {
 		type: String,
 		required: [true, "Company Email Is Required!"],
+		unique: true,
 	},
 
 	contact: {
@@ -36,5 +37,7 @@ const companySchema = new mongoose.Schema({
 		required: [true, "Company City Is Required!"],
 	},
 });
+
+companySchema.index({ email: 1 }, { unique: true });
 
 module.exports = mongoose.model("companies", companySchema);
