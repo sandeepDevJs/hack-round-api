@@ -1,8 +1,6 @@
-# Ecommerce API
+# Project API
 
-> Backend API For E Commerce Application, [which is available here!](https://github.com/sandeepDevJs/ecommerceProject)
-
-> [See Documentation For API Here](https://documenter.getpostman.com/view/12289426/TWDUryKg)
+> Backend API For Hack Round Frontend, [which is available here!](https://github.com/sandeepDevJs/frontend-hack-round)
 
 ## API security
 
