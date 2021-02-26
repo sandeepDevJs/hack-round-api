@@ -25,5 +25,6 @@ module.exports.updateCompVal = {
 			.message("Invalid contact!"),
 		state: Joi.string().min(2).max(50),
 		city: Joi.string().min(2).max(50),
+		logo: Joi.optional(),
 	}),
 };

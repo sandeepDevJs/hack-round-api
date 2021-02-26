@@ -12,7 +12,7 @@ module.exports = (err, req, res, next) => {
 
 	//Duplicate Error
 	if (err.code === 11000) {
-		error = new ErrorResponse("Resource Already Exists!!", 400);
+		error = new ErrorResponse("User Already Exists!!", 400);
 	}
 
 	//if validation Error
